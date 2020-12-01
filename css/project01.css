@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+header {
+    width: 100%;
+    padding: 0 2%;
+    height: 60px;
+    background-color: #262951;
+}
+
+.banner {
+    width: 100%;
+    padding: 0 2%;
+    height: 557px;
+    background-image: url('../images/banner-header.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.center {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.center img {
+    width: 110px;
+    margin: 10px;
+    margin-top: 14px;
+}
+
+.banner > .center {
+    height: 100%;
+}
+
+.left-aside {
+    float: left;
+    width: 450px;
+    height: 270px;
+    background-color: rgba(33, 35, 67, .7);
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.left-aside ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+.left-aside li {
+    color: white;
+    line-height: 50px;
+}
+
+.form {
+    width: 400px;
+    height: Calc(100% + 22px);
+    background-color: white;
+    float: right;
+    position: relative;
+    top: -22px;
+    border-top: 8px solid rgba(254, 156, 27, 0.555);
+    border-right:  8px solid rgba(254, 156, 27, 0.555);
+    border-left:  8px solid rgba(254, 156, 27, 0.555);
+    background-clip: padding-box; /* Isso faz com que a borda fique transparente */
+    padding: 10px;
+    text-align: justify;
+    color: #999999;
+}
+    /* OU.... poderia ter sido...
+
+    .banner > .center {
+        height: 100%;
+        text-align: right;
+    }
+
+    .center > div.form {
+       width: 400px;
+        height: 100%;
+        background-color: white; 
+        display: inline-block;
+    }
+    */
+
+.form h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+.input-container label {
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    width: 344px;
+    height: 55px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.input-container p {
+    margin-top: 20px;
+}
+
+.input-container input[type=submit] {
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 20px auto;
+    display: block;
+    background-color: #262951;
+    color: #FE9A18;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container input[type=submit]:hover {
+    background-color: #363a79;
+}
+
+.middle {
+    width: 100%;
+    padding: 40px 2%;
+    background-color: #ffac3e;
+    text-align: center;
+}
+
+.middle-text {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+}
+
+.middle-text p {
+    text-align: justify;
+    margin: 40px auto 10px auto;
+    line-height: 35px;
+}
+
+.arrow-down {
+    background-image: url('../images/arrow-down02.png');
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    position: relative;
+    top: 70px;
+    margin: auto;
+}
+
+#three h2 {
+    color: #262951;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.extra-info {
+    margin-top: 50px;
+}
+
+.info {
+    float: left;   
+    width: 33.33%;
+}
+
+    /* O que fizemos acima foi um pequeno truque para alinhar elementos distribuidos de maneira uniforme na tela. Primeiro lembre-se que .info é a <div> que contém o conteúdo. Usamos o float:left; depois o width: 33.33% pq são 3 imagens. Se fossem 2 imagens seria 50%, se fossem 4 imagens seria 25% e por ai vai... */
+
+.info img {
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+.info p {
+    text-align: justify;
+    padding: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+    /* Já nas <div> que contêm os conteúdos, definimos a margin:auto e o display:block */
+
+.footline {
+    background-color:  #363a79;
+    height: 6px;
+    width: 100%;
+    margin-top: 60px;
+    display: inline-block;
+    clear: both;  /* sem esse clear: both; tava rolando uma coisa muito estranha, a <div> (que no caso é uma linha) tava indo pra cima das 3 imagens. Então é muito comum após usar o float, daí logo após o último elemento que você foi */
+}
+
+footer p {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 40px;
+    color: #ffac3e;
+}
+
+/* Agora começamos a trabalhar responsividade pra valer com as MediaQueries */
+
+@media screen and (max-width: 1024px) {
+    header {
+        width: 100%;
+        padding: 30px 0;
+        text-align: center;
+    }   
+    
+    .center img {
+        width: 110px;
+        margin: 0;
+        position: relative;
+        top: -15px;
+    }
+
+    .banner {
+        width: 100%;
+        padding: 40px 2%;
+        height: auto;
+    }
+
+    .clear {
+        clear: both;
+    }
+    /* essa classe .clear foi criada para limpar o float do "left-aside" e do "form" e permitir que a imagem do banner fosse exibida */
+
+    .form {
+        margin: 0 auto;
+        float: none;
+        top: 20px;
+        border-bottom:  8px solid rgba(254, 156, 27, 0.555);
+    }
+
+    .left-aside {
+        float: none;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .middle-text p {
+        padding: 0 7%;
+    }
+
+    .info {
+        float: none;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    #three h2 {
+        margin: 50px;
+    }
+
+    .info img {
+        width: 40%;
+    }
+}
