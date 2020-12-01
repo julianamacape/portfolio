@@ -267,6 +267,34 @@ footer p {
 }
 
 @media screen and (max-width: 700px) {
+
+    .form {
+        width: 350px;
+        height: auto;
+        float: none;
+        position: relative;
+        top: 20px;
+    }
+    
+    .form h2 {
+        font-size: 18px;
+    }
+    
+    .input-container input {
+        width: 312px;
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .input-container input[type=submit] {
+        width: 150px;
+        height: 45px;
+        font-size: 18px;
+        margin: 20px auto;
+        display: block;
+        padding: 10px;
+    }
+    
     .middle-text p {
         padding: 0 7%;
     }
