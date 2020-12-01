@@ -313,7 +313,16 @@ footer p {
         width: 40%;
     }
 
+    .footline {
+        position: relative;
+        top: -20px;
+    }
+
     footer p {
-        margin-top: 10px;
+        position: relative;
+        top: -30px;
+        line-height: 30px;
+        font-size: 12px;
+        padding-bottom: 30px;
     }
 }
