@@ -312,4 +312,8 @@ footer p {
     .info img {
         width: 40%;
     }
+
+    footer p {
+        margin-top: 10px;
+    }
 }
